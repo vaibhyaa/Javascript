@@ -1,0 +1,47 @@
+javascript is a language or technology that we use to create websites 
+e.g youtube.com , amazooon.com 
+
+main 3 technology we used to create website 
+html , css , javascript 
+html :- structure of website (content  e.g buttons , images , text )
+css : - appearence of website (adding colors , and beauty)
+javascript : makes website interactive (do somwthing)
+
+
+javascipt :- is basically giving instructions to computer and the computer follows our instructions
+
+javascript is versitle , dynamically typed programming language that brings life to web pages by making them interactive
+used for building interactive web application , supports both client side and server side rendering development 
+object-oriented , platform independent , update html using dom capable of exception handling , allos anonymous function 
+
+javascript is single-threaded language that executes the code line by line 
+the data type of variable is decided at run-tim in javascript, which is why it is called dynamically typed 
+
+keyfeatures of javascript:-
+cliend side scripting :- it runs on users browser so has faster response timw without needing to communicate with server 
+versatile: -can be used for a wide range of tasks . from simple cal to complex server-side application 
+event-driven : responds to user actions (clicks , keystrokes ) in real-time 
+asynchrorous :-it can handle tasks like fetching data from servers without freezing the user interface 
+rich ecosystem :- there are numerous lib and framework build on javascript such as react , angular vue.js makes web dev faster and more efficient 
+
+
+client-side :- 
+involves controlling the browser and its dom (Document object model)
+handles user events like clicks and form inputs 
+common lib include angular , react , vue
+
+server-side :-
+involves interacting with database , manipulating files , generating responses 
+node js and framework like express are widely used for server-side javascript , enabling full stack dev.
+
+
+javascript supports both imperative and declarative styles :-
+imperative programming :- 
+focuses on how to perform tasks by controlling the flow of computation. this includes approach like procedural and objet-oriented programming, often using costructs like async/await to handle asynchrornous actions.
+declarative programming :-focuses on what should be done rather than how its done , it emphasizes describing the desired result such as with arrow funtion , without detailing the steps to achieve it 
+
+limitaions of javascript :-
+security risks
+performance 
+complexity 
+weak error handling and type checking 

@@ -1,0 +1,18 @@
+// variables and data types are foundational concepts in programming, serving as building blocks for storing and manipulating information within programm 
+
+// data types in javascript :-
+// primitives data types :-
+// (numeric type):-number and bigint
+// (non-numeric type) :- string , boolean , null , undefined , symbol 
+
+// non-primitives data types :- object , arrays , funciton , data object , regular expression 
+
+
+// what is variable:-
+// it is like a container that holds data can be reused or updated later in the programm 
+// variables are declarted using the keywords ver , let const 
+
+// declaing varibles in javascript :-
+before ES6(2015):- Varibles were declared  only with var which is function -scoped and global - scoped , causing issues like hoisting and blobal pollution,
+Es6 introduction : let and const intruduced to provide safer alternatives for declaing varibles 
+scope :- let ad const are blocked-scoped (limited to {} block ) or global-scoped , reducing error compared to var  
