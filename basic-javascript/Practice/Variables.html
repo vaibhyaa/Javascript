@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <button
+      onclick="
+		alert(`cartQuantity is ${cartQuantity}`)
+		"
+    >
+      Cart quantity
+    </button>
+    <button
+      onclick="
+	// console.log('Cart Quantity: ',cartQuantity);
+	console.log(`Cart Quantity : ${cartQuantity}`);
+	
+	"
+      log
+    >
+      Show quantity
+    </button>
+    <button
+      onclick="
+	// cartQuantity=cartQuantity+1
+	// cartQuantity+=1
+	cartQuantity++;
+
+	console.log(`Cart Quantity : ${cartQuantity}`);
+	
+	"
+    >
+      Add quantity
+    </button>
+    <button
+      onclick="
+		// cartQuantity=cartQuantity+2
+		cartQuantity+=2
+
+	console.log(`Cart Quantity : ${cartQuantity}`);
+	"
+    >
+      +2
+    </button>
+    <button
+      onclick="
+			// cartQuantity=cartQuantity+3
+			cartQuantity+=3
+
+	console.log(`Cart Quantity : ${cartQuantity}`);
+	"
+    >
+      +3
+    </button>
+    <button
+      onclick="
+			cartQuantity=0;
+	console.log(`Cart Quantity : ${cartQuantity}`);
+	"
+    >
+      Reset quantity
+    </button>
+
+    <script>
+	  // camelCase is standard for javascript variable, function , objects properties naming ,  and for classs , react component ,Component folder PascalCase is used and for kebab-case is used mostly in html and css
+      // cant use reserved keywords/ special characters/ start with numbers
+      // can't redeclare variable with let keyword
+      // let variable=10;
+      // console.log(variable);
+
+      // let variable=10;
+      // console.log(variable);
+
+      // variable=12;
+      // console.log(variable);
+
+      // let calculation=2+2;
+      // console.log(calculation);
+      // let result=calculation*variable;
+      // console.log(result);
+      // console.log(calculation+variable);
+      // let message='Hello,';
+      // console.log(message);
+
+	// const == cant changes value , must be initialized
+
+	// let == block scope , can't be redeclared
+
+	// var == global scope , function scope , can be redeclared
+
+      let cartQuantity = 0;
+
+
+	//   variable re-assignment shortcuts
+	// ++ , variable = variable +1
+	// -- , variable = variable -1
+	// +=2 , variable = variable +2
+	// -=2 , variable = variable -2
+	// *=2 , variable = variable *2
+	// /=2 , variable = variable /2 
+
+    </script>
+  </body>
+</html>

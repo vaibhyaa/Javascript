@@ -7,7 +7,6 @@
 let bigNum=BigInt('1234222222222222222222222222222222222222222222222222222222222')
 console.log(bigNum);
 
-
 let bigHex=BigInt("0x1ffffffeeeeeeeeef");
 console.log(bigHex);
 

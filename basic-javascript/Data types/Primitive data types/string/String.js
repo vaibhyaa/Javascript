@@ -59,3 +59,37 @@ console.log(s6);
  
 
  
+
+
+// this is concatenation
+console.log('some'+'more'+'text');
+
+// types of value
+console.log(typeof 2);
+console.log(typeof 'string');
+
+// type coersion / automatic type conversion 
+console.log('string'+2);
+
+
+//practical example 
+// first it calculates $+20.94 and becomes string and agan that string added to 7.99
+console.log('$'+20.94+7.99);
+console.log('$'+(20.94+7.99));
+
+console.log('Items (' + (1 + 1) + ') $' +(2095+799)/100);
+console.log('Items (' + (1 + 1) + ') $' + ((2095 + 799) / 100));
+
+
+// 3 WAYS TO CREATE STRING 
+// SINGLE QUOTE 
+// DOUBLE QUOTE 
+// BACKTICKS `` TEMPLATE STRINGS
+// SPECIAL FEATURE OF TEMPLATE STRINGS 
+// INTERPOLATION == insert value directly into a string 
+console.log(`Items (${1+1}): $${(2095 + 799) / 100}`);
+
+
+
+
+ 
