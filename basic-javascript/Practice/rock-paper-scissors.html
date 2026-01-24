@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <!-- when we click the a button 
+	1):- the computer randomely selects a move 
+	2):- compare the moves to get the result 
+	3):- display the result on screen  
+	-->
+    <p>Rock Paper Scissors</p>
+    <button
+      onclick="
+        //   console.log(Math.random()*10);
+        const randomNumber = Math.random();
+        // But JavaScript does NOT support chained comparisons like math.
+        // if (1 / 3 >= randomNumber >= 0) {
+        //   console.log('rock');
+        // } else if (2 / 3 >= randomNumber >= 1 / 3) {
+        //   console.log('Paper');
+        // } else {
+        //   console.log('Scissors');
+        // }
+
+        let computerMove;
+        if (1 / 3 >= randomNumber && randomNumber >= 0) {
+          //   console.log('rock');
+          computerMove = 'rock';
+        } else if (2 / 3 >= randomNumber && randomNumber >= 1 / 3) {
+          //   console.log('Paper');
+          computerMove = 'paper';
+        } else {
+          //   console.log('Scissors');
+          computerMove = 'Scissors';
+        }
+        console.log(computerMove);
+
+        let result = '';
+        if (computerMove === 'rock') {
+          result = 'tied';
+        } else if (computerMove === 'paper') {
+          result = 'you loose';
+        } else {
+          result = 'you win';
+        }
+
+        alert(
+          `you picked rock and computer picked ${computerMove}, SO THE RESULT IS :-${result}`,
+        );
+      "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+        const randomNumber = Math.random();
+        let computerMove;
+        if (1 / 3 >= randomNumber && randomNumber >= 0) {
+          //   console.log('rock');
+          computerMove = 'rock';
+        } else if (2 / 3 >= randomNumber && randomNumber >= 1 / 3) {
+          //   console.log('Paper');
+          computerMove = 'paper';
+        } else {
+          //   console.log('Scissors');
+          computerMove = 'Scissors';
+        }
+        console.log(computerMove);
+
+        let result = '';
+        if (computerMove === 'paper') {
+          result = 'tied';
+        } else if (computerMove === 'rock') {
+          result = 'you win';
+        } else {
+          result = 'you loose';
+        }
+
+        alert(
+          `you picked Paper and computer picked ${computerMove}, SO THE RESULT IS :-${result}`,
+        );
+      "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+        const randomNumber = Math.random();
+        let computerMove;
+        if (1 / 3 >= randomNumber && randomNumber >= 0) {
+          //   console.log('rock');
+          computerMove = 'rock';
+        } else if (2 / 3 >= randomNumber && randomNumber >= 1 / 3) {
+          //   console.log('Paper');
+          computerMove = 'paper';
+        } else {
+          //   console.log('Scissors');
+          computerMove = 'Scissors';
+        }
+        console.log(computerMove);
+
+        let result = '';
+        if (computerMove === 'scissors') {
+          result = 'tiee';
+        } else if (computerMove === 'rock') {
+          result = 'you loose';
+        } else {
+          result = 'you win';
+        }
+
+        alert(
+          `you picked scissor and computer picked ${computerMove}, SO THE RESULT IS :-${result}`,
+        );
+      "
+    >
+      scissors
+    </button>
+
+    <script></script>
+  </body>
+</html>

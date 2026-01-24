@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans</title>
+  </head>
+  <body>
+    <!-- booleans are another type of value :- true ad false this are only 2 boolean values  -->
+    <!-- purpose is :- a boolean value represents whether something is true or false  -->
+    <!--  if-statements let us write multiple group of code and then decide which code to run -->
+    <script>
+      // console.log(typeof (5<6))
+      // console.log(5<3)
+      // console.log(5!==4);
+
+      // if (false) {
+      // 	console.log('true');
+      // } else{
+      // 	console.log('false');
+      // }
+
+      // practical use of boolean values and then decide which code to run
+      //
+      const age = 68;
+      // if (age>=18) {
+      // 	console.log('You can drive ...!');
+      // } else {
+      // 	console.log('You cannot drive ');
+      // }
+
+      // more than two conditions
+      // If true → executes this block Skips all remaining else if / else
+      // if first condition falis ->executes the second block
+      // if non it true then run the else block
+      if (age >= 16) {
+        console.log("you can drive ");
+        console.log("congrates ");
+      } else if (age >= 14) {
+        console.log("almost there ..!");
+      } else {
+        console.log("You cannot drive ");
+      }
+
+      //   logical operator
+      // and
+      console.log(true && true);
+      console.log(false && true);
+      console.log(true && false);
+      console.log(false && false);
+
+      //   or
+      console.log(true || true);
+      console.log(true || false);
+      console.log(false || true);
+      console.log(false || false);
+
+      //   truthy and falsy values
+      // false values :- false , 0 , '' , NaN , undefined , null
+      // truthy values :- any values not on this list is truthy
+
+      const cartQuantity = 5;
+      if (cartQuantity) {
+        console.log("cart has products");
+      }
+      console.log(!0);
+
+      //   NaN :- this ewsult we get when we do some invalid math
+      console.log(`text` / 5);
+
+      // undefined represent something dowsnot have value
+      let a;
+      console.log(a);
+
+      // null :- we awant to tell that null indicates the deliberate absence of any value
+
+      // ternary operator:- ? :  (shortcut for if-else)
+      // true ? 'truthy value ' : 'falsy value'
+      const result = false ? "truthy" : "falsy ";
+      console.log(result);
+
+      //   AND operator (&&)
+      // value1 && value2
+      // check if 2 sides are BOTH truthy
+      // and the firt left side value is falsy we already know its impossible for both sides to be truthy because one is already false
+      // so AND operatore stops early dont need to run the code on the right (short-circuit evaluation )
+      // if one of then if false then expression becomes falsy
+      false && console.log("hello");
+      true && console.log("hello");
+      let result1 = true && "hello...!";
+      console.log(result1);
+
+
+      //   or operator (default operator )
+      const currency = NaN || "USD";
+      console.log(currency);
+    </script>
+  </body>
+</html>
