@@ -12,6 +12,8 @@ let age = 25;
 let hasLicense = true;
 // check if person is eligible to drive if age is greater than or equal to 18 and has a license
 console.log(age >= 18 && hasLicense); // true
+console.log(age >= 18 && 'hasLicense'); // true   (this is used in react like if first left side value is true then print the right side if its component or text )
+
 age=18;
 let IdProff=true;
 if (age>=18 && IdProff) {
@@ -104,3 +106,10 @@ let defaultName = "Guest";
 console.log(username ?? defaultName); // "Guest"
 username="Vaibhav";
 console.log(username ?? defaultName); // "Vaibhav"
+
+
+
+
+
+
+console.log(null && 10);
