@@ -1,0 +1,27 @@
+javascript for loop is control flow statement that allows code to be executed repeated;y based on a condition.
+it consists of three parts : initialization , condition , and increment/decrement 
+fo(statement 1; statement 2 ; statement 3){
+	code here ...
+}
+
+statement 1:- it is initialization of the counter , it is executed once before the execution of the code block 
+statement 2:- it defines the testing condition for executing the code block 
+statement 3:- is is the increment or decrement of the counter & executed (every time) after the code block has been executed 
+
+
+
+
+
+
+while loop :-
+a loop that repeats a block of code as long as a specified condition is true 
+
+
+do-while :-
+a loop that executs a block of code at least once , then repeats the block as long as a specified condition is true
+
+for..of loop :-
+iterates over the values of an iterable object (like arrays , string , maps , sets , etc ...)
+
+for..in loop :-
+iterates over the enumerable properties of an object (including inherited properties). 

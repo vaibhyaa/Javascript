@@ -1,0 +1,188 @@
+function in javascript are reusable code designed to perform specific taask 
+they allow you to organize , reuse , and modularize code . it can take inputs , perform actions , and return outputs 
+
+
+in fucntion , parameters are placeholder defined in the function , while arguments are the actual values you pass when calling the funciton 
+
+function greet(name){
+	console.log('Hello', name)
+}
+
+greet('vaibhav);
+
+
+default parameter :-
+default parameter are used when no argument is provided during the funciton call.
+if no value is passed , the funciton automatically uses the default value.
+
+fuction greet(name='Guest'){
+		console.log('Hello', name)
+}
+
+greet();
+greet('vaibhav);
+
+
+
+the return statement :- 
+the return statement is used to send a result back from a function 
+when return executes , the function stops running at that point 
+the return value can be stored in variable or used directly
+
+fuction add(num1,num2){
+	return num1+num2;
+}
+let result =add(2,3);
+console.log(result)   or console.log(add(2,3));
+
+
+
+
+important concept :- 
+1) named function :-
+a function that has its own name when declared . its easy to reuse and debug because the name shows up in error messages or stack traces .
+fuction greet(name='Guest'){
+	console.log('Hello', name)
+}
+
+
+
+2)anonymous funciton:-
+a function that does not have a name . it is usually assigned to a variable or used as a callback , since it has no name , it cannot be called directly (need to assign to variable)
+const greet=function{
+	return 'Hii there!'
+}
+
+
+3) function expression :- 
+when you assign a function (can be named or anonymous) to a variable. the function can then be used be calling that variable
+const add=function (a,b){
+	return a+b;
+}
+
+console.log(add(2,3));
+
+
+4)Arrow function :-(ES6)
+a new way to write function using the => syntax.
+they are shorter and do not have their own this binding , which makes them useful in some cases .
+
+
+
+5) immediately invoked function expression (IIFE):-
+IIEF function are executed immediately after their definitation . they are often used to create isolated scops
+
+(function (){
+	console.log("this runs immediately)
+})();
+
+
+6)callback function :-
+a callback function is passed as an argument to another function and is executed after the completion of that function 
+funciton num(n,callback){
+return callback(n);
+}
+const double =(n)=>n*2;
+console.log(num(5,double));
+
+
+
+7)constructor function :- 
+a special type of function used to create muitiple objects with the same structure , its called with the new keyword.
+function Person(name,age){
+	this.name=name;
+	this.age=age;
+}
+
+cons user=new Person('vaibhav,28);
+console.log(user.name)
+
+
+8)async function :-
+function that handle aynchronous tasks . declared with async , they return a promise , and you can use await inside them to pause until promise resolves .
+async function fetchData(){
+	return 'data fetched';
+}
+fetchData().then(console.log);
+
+
+
+9)generator function :-
+declared with an asterisk * , these functions can pause execution using yield and resume later . useful for lazy loading values or handling iterators.
+function* numbers(){
+	yield 1;
+	yield 2;
+	yield 3;
+}
+
+const gen=numbers();
+console.log(gen.next().value)
+console.log(gen.next().value)
+
+
+
+10)resursive function :- 
+a function that calls itself until a condition is met. very useful for problems like factorial , fibonacci , tree traversals 
+function factorial (n){
+	if(n===0) return 1;
+	return n * factorial(n-1);
+}
+
+
+
+11) higher order function :- 
+a function that either takes another function as a parameter or returns another function.
+these are common in javascript (map,filter , reduce )
+function multiplyBy(factor){
+	return function(num){
+		return num*factor;
+	};
+}
+
+cons double = multiplyBy(2)
+console.log(double(5));
+
+
+
+12)nested function :-
+functions defined within other function are called nested functions they have access to avriable of their parent function 
+function outerFun(a){ 
+    function innerFun(b){
+		return a+b;
+	}
+	return innerFun;
+}
+
+const add=outerFun(10);
+console.log(add(5));
+
+
+13)pure function :- (imp interview question)
+pure function returns the same output for the same inputs and do not produce any side effects.
+they do not modify state outside their scope . such as modifying global variables , changing the state of objects passed as arguments , or performring I/O operations
+
+function pureAdd(a,b){
+    return a+b;
+}
+console.log(pureAdd(2,3));
+
+
+
+14)default parameter function :- 
+a function where parameter have default values of no argument is passed. helps avoid unefined issues.
+function greet(name='guest'){
+	return 'hello ,' + name;
+}
+
+console.log(greet());
+console.log(greet('vaibhav'));
+
+
+
+15) Rest parameter function :-
+uses to collect all remaining arguments into an array . very useful when you dont know how many arguments will be passed 
+
+function sum(...nums){
+	return num.reduce((a,b)=>a+b,0)
+}
+conole.log(sum(1,2,3,4,5,));

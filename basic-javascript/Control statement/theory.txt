@@ -1,0 +1,83 @@
+javascript control statement is used to control the execution of the programm based on a specific condition 
+if the condition meets then a particular block of action will be executed otherwise it will execute another block of action that satisfies that particular condition 
+
+types of control statement in javascript 
+conditional statement :- these statements are used for decision-making , a decision 
+n is made by the conditional statement based on an expression that is passed. Either YES or NO.
+iterative statement:- this is statement that iterates repeatedly until a condition is met. Simply said  , if we have an expression , the statement will keep repeating itself until an unless it is satisfied.
+
+
+approach :- if statement
+in this approach , we are using an if statement to check a specific condition , the code block get executed when the given condition is satisfied 
+if(condition_is_given_here){
+	//if condition is met , 
+	//the code will get executed 
+}
+
+
+
+if-else approach :-
+the if-else statement will perform some action for specific condition if the condition meets then a particular code of action will be executed otherwise it will execute another cod of action that satisfies that particular condition 
+if(conditon_1){
+	//executes when condition_1 true
+	if(condition_2){
+		//exectes when condition_2 is true
+	}
+}
+
+if(condition){
+	//executes when condition is true
+} else {
+	//executes when condition is false 
+}
+
+
+
+approach 3:- switch statement
+the switch case statement is javascript also used for decision-making purposes. in some cases using the switch case statement is seen to be more convinent than if-else statements
+switch(expression){
+	case value1:
+	     statement1;
+		 break;
+    case value2:
+		 statement2;
+		 break;
+	.
+	.
+	.
+	.
+	case valueN:
+		 statementN;
+		 break;
+	default:
+	    statementDefault;	 
+}
+
+
+
+approach 4 : using the ternary operator (conditionl operator)
+the conditonal operator , also referred to as the ternary operator (? : ) , is s shortcut for expressing conditional statements in javascript
+
+syntax :- conditon ? value if true : value if false 
+
+
+
+
+
+////////////////////////////////////////////////////////////loops///////////////////////////////////////////////////////////
+approach 1 using for loop :-
+in this approach we are usign for lop in which the execution of set of instruction repeatedly until some condition evalutes and becomes false 
+for (statement1;statement2;statement3){
+  // code here .....
+}
+
+
+using while loop :-
+while (conditon){
+   //code block 
+}
+
+
+usign do while-loop :- 
+the do while loop is similar to the while loop , except that the condition is evaluted after the execution of the loop body 
+this means the code block will execute at least once , even if the condition is false .
