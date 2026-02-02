@@ -1,0 +1,40 @@
+1)what are the possible ways to create object in javascript ?
+:- there are many ways to create objects in javascript :-
+object literal ,object constructor ,object create method ,function constructor with prototype , object assign method, ES6 class sntax , singleton pattern
+main this two:-
+---)object literal:- 
+const obj={
+	name:'vaibhav',
+	phoneNo:1234567890,
+}
+object literal property values can be of any data type , including array , functions , nested object
+
+---)object constructor:-
+const obj=new Object();
+obj.name='vaibhav';
+obj['job-profile']='software engineer';
+
+
+
+2)what is prototype chain :-
+It is a core concept of javascript inheritance model. It allows object to inherit properties and methods from other object 
+the prototype chain enables inheritance in javascript. If a property isnt found on an object , javascript looks up its prototype chain . The prototype of an object instance can be accessed with Object.getPrototypeOf(obj) or _proto_.
+the prototype of a constructor function is available via Constructor.prototype 
+the chain ends when the prototype is null. 
+
+
+IMP:-3)What is the difference between call , apply , bind ?
+this are the methods which allows you to controls the context(this value) in which a function is executed.
+purpose is simliar :- they differ in how they handle arguments and when the function is invoked 
+call :- the call() methods invokes a function immediately , allowing you to specify the value of this and pass arguments individullay (comma-seperator ) 
+apply:- the apply() method is similar to call() , but it takes the function arguments as an array (or array-like-object) instead of individual argumenst 
+bind():-
+the bind() method creates a new function with specific this value and , optionally , preset initial arguments 
+unlike call and apply , bind does not immediately invoke the function : instead , it returns a new function that you can call later 
+points)call and apply are almost interchangeble ; both invoke the function immediately , but differ in how arguments are passed 
+binds down not execute the function immediately . instead it creates a new function with the spefified this value and optional arguments , which can be called later 
+use call or apply when you want to immediately invoke a function with specific this context . use bind when you want to create a new function with specific this context to be invoked later 
+
+
+4)what is json and its common operations :-
+JSON(javascript object notation ) is a lightweight , text-based data format that uses javascript object syntax for structuring data . It was popularized by Douglas Crocford and is widely used for transmitting data between a server and client in web application 
