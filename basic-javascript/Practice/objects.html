@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button
+      onclick="
+        // But JavaScript does NOT support chained comparisons like math.
+        // if (1 / 3 >= randomNumber >= 0) {
+        //   console.log('rock');
+        // } else if (2 / 3 >= randomNumber >= 1 / 3) {
+        //   console.log('Paper');
+        // } else {
+        //   console.log('Scissors');
+        // }
+
+        // console.log(pickComputerMove());
+        playGame('rock')
+      "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+        // console.log(pickComputerMove());
+        playGame('paper')
+      "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+        // console.log(pickComputerMove());
+        playGame('scissors')
+      "
+    >
+      scissors
+    </button>
+
+    <button
+      onclick="
+        score.wins = 0;
+        score.lose = 0;
+        score.tied = 0;
+        localStorage.removeItem('score');
+      "
+    >
+      Reset The scopre
+    </button>
+
+    <script>
+      // after saving the score when we load the page , we are going to load the score we are just saved from localstorage
+      // we get that score by localstorage getItem and score is saved as JSON string
+      // so for logging or using we need ot convert it back to javascript object by JSON.parse
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        lose: 0,
+        tied: 0,
+      };
+      console.log(score);
+
+      // if (!score) {
+      //   score = {
+      //     wins: 0,
+      //     lose: 0,
+      //     tied: 0,
+      //   };
+      // }
+
+      // const value = localStorage.getItem(score);
+      // console.log(value);
+
+      //   this function is used to create computer move from random num method
+      function pickComputerMove() {
+        let computerMove;
+        const randomNumber = Math.random();
+        if (1 / 3 >= randomNumber && randomNumber >= 0) {
+          // console.log('rock');
+          computerMove = "rock";
+        } else if (2 / 3 >= randomNumber && randomNumber >= 1 / 3) {
+          computerMove = "paper";
+        } else {
+          computerMove = "scissors";
+        }
+        return computerMove;
+      }
+
+      //   this function is used to compare between playermove and computermove and provide the result so we can display that result
+      function playGame(playerMove) {
+        const computerMove = pickComputerMove();
+
+        let result = "";
+        if (playerMove === "scissors") {
+          if (computerMove === "scissors") {
+            result = "tied";
+          } else if (computerMove === "rock") {
+            result = "you lose";
+          } else {
+            result = "you win";
+          }
+        }
+        if (playerMove === "rock") {
+          if (computerMove === "rock") {
+            result = "tied";
+          } else if (computerMove === "paper") {
+            result = "you lose";
+          } else {
+            result = "you win";
+          }
+        }
+
+        if (playerMove === "paper") {
+          if (computerMove === "paper") {
+            result = "tied";
+          } else if (computerMove === "rock") {
+            result = "you win";
+          } else {
+            result = "you lose";
+          }
+        }
+
+        if (result === "you win") {
+          // score.wins += 1;
+          score.wins++;
+          //   score.wins = score.wins + 1;
+        } else if (result === "you lose") {
+          // score.loose += 1;
+          score.lose++;
+        } else if (result === "tied") {
+          // score.tied += 1;
+          score.tied++;
+        }
+
+        // after we update the score we are going to save it localstorage using localstorage setItem
+        // now localstorage only supports string so we ahev to convert score object into JSON string (JSON stringfy)
+        localStorage.setItem("score", JSON.stringify(score));
+
+        alert(
+          `you picked ${playerMove} and computer picked ${computerMove}, SO THE RESULT IS :-${result}
+		       Win:${score.wins}, Lose:${score.lose}, tied:${score.tied}`,
+        );
+      }
+    </script>
+  </body>
+</html>

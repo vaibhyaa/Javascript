@@ -1,0 +1,20 @@
+an object is a dynamic data structure that stores related data as key-value pair where each key uniquely identifies its value 
+the values of properties can be primitive , object , function (known as methods when defined inside a object )
+objects are mutable and dynamic properties can be added , modified , or deleted at any time 
+objects allow data grouping and encapsulation , making it easier to manage related information and behaviour together 
+
+2 primary ways to create object in javascript :-
+1)creation using object literals :-
+the object literal syntax allows you to define and initialize an object withcurly braces {} setting properties as key-value pair 
+
+let obj={
+	name:'Vaibhav',
+	age:27,
+	job:'Developer,
+}
+
+2)creation using new Object() Constructor :-
+let obj = new Object();
+obj.name='vaibhav';
+obj.age=23;
+obj.job='tester,

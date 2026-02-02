@@ -1,6 +1,15 @@
 function in javascript are reusable code designed to perform specific taask 
 they allow you to organize , reuse , and modularize code . it can take inputs , perform actions , and return outputs 
 
+we can return caluculation , variable , anything that result a value 
+
+
+local variables:-
+variables declred within a javascript fuction, become LOCAL to the function.
+local varibles can only be accessed from within the funciton 
+
+parameters :- are the listed in the funciton definitaion 
+arguments :- are the real values passed to , and received by the function
 
 in fucntion , parameters are placeholder defined in the function , while arguments are the actual values you pass when calling the funciton 
 
@@ -186,3 +195,27 @@ function sum(...nums){
 	return num.reduce((a,b)=>a+b,0)
 }
 conole.log(sum(1,2,3,4,5,));
+
+
+
+
+
+
+
+difference between function expression vs function declaration 
+funciton expression :-
+cannot be hoited , so they cannot be called before their definition 
+can be passed as arguments  or stored in varibale 
+defined within an expression 
+useful for callbacks and dynamic function 
+can be assigned to variable or passed as arguments 
+function expression normally a statement , that is why it usually ends with a semicolon 
+function expression when assigning function to a variable 
+funciton expression in callback and event handlers 
+
+funciton declaration :-
+function declaration are hoisted so that can be called before their definition
+typically used as standalone function
+uses function keyword with a name 
+best for defining reusable functions
+use function declaration for genera-purpose function

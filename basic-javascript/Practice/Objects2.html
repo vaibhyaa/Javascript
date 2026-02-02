@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const product2 = {
+        name: "shirt",
+        "delivery-time": "1 day",
+        rating: {
+          stars: 4.5,
+          count: 87,
+        },
+        objFun: function () {
+          console.log("function inside object ");
+        },
+      };
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2["name"]);
+      console.log(product2["delivery-time"]);
+      console.log(product2.rating.count);
+      product2.objFun();
+
+      console.log(typeof console.log);
+
+      console.log(JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+
+      //   string
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+
+      //   object are reference
+      const obj1 = {
+        message: "hellloooo",
+      };
+
+      //   copy by reference
+      const obj2 = obj1;
+
+      obj1.message = "good morning...!";
+      console.log(obj1);
+      console.log(obj2);
+
+      console.log(obj2 === obj1);
+
+      //   we cant compare object directly
+      const obj3 = {
+        message: "good morning...!",
+      };
+      console.log(obj3 === obj1);
+
+      const obj4 = {
+        message: "good Job...!",
+        price: 799,
+      };
+      //   const messageObj=obj4.message;
+      const { message: messageObj, price } = obj4;
+      console.log(messageObj);
+      console.log(price);
+
+      const obj5 = {
+        // message: message,
+        messageObj,
+        method: function () {
+          console.log("method");
+        },
+      };
+      console.log(obj5);
+	  
+	  
+    </script>
+  </body>
+</html>
