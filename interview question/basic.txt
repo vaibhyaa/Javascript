@@ -1,3 +1,33 @@
+what is the difference between == and === javascript ?
+In javascript, == the loose equality operator, which compares two values for equality after performing type coersion if necessart.
+this means it converts the operands to the same type before comparing 
+=== is the strict operator , which compares both values and their types 
+
+Is javascript compiled or interpreted ?
+javascript is mostly interpreted , but modern browsers also compile it just-in-time to make it faster 
+the browser reads your javascript code line by line and runs it directly 
+modern broswers (like chrome v8 engine) first translate parts of your code into machine code while running it , so the computer can execute it much faster 
+
+
+How many ways an HTML ele can be accessed in javascript code ?
+4 ways :- 
+getElementById() method :-it is used to get the ele by its id name.
+getElementByClass() method :- it is used to get all the ele that have the given classname.
+getElementByTagName():- it is used to get all the ele that have the given tag name.
+querySelector():- this function takes css style selector and returns the first selected ele.
+
+What the return-value difference between x++ and ++x?
+both increment, but return different value :-
+post increment (x++):- return old value , then increment.
+pre increment (++x):- increment first , then return the new value
+
+
+what is the difference between var , let and const and what is the temporal dead zone ?
+var :- declares variable with function or global scope and allows re-declaration and updates within the same scope 
+let:- declares variables with block scope , allowing updates but not re-declaration within the same block 
+const :- declares block-scoped variables that cannot be reassigned after their initial assignment.
+
+
 1)what are the possible ways to create object in javascript ?
 :- there are many ways to create objects in javascript :-
 object literal ,object constructor ,object create method ,function constructor with prototype , object assign method, ES6 class sntax , singleton pattern
