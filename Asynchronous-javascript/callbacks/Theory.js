@@ -9,10 +9,11 @@
 // 3. async/await: A syntactic sugar built on top of Promises that allows developers to write asynchronous code in a more synchronous and readable manner. The async keyword is used to declare an asynchronous function, and the await keyword is used to pause the execution of the function until a Promise is resolved or rejected.
 
 // examples :-
-function checkInvertary(callback) {
+function checkInventory(callback) {
   setTimeout(() => {
     console.log("checking the inventory");
-    // const error = new Error("inventory check failed");
+
+    const error = null; // simulate success
     callback(error);
   }, 2000);
 }
@@ -20,50 +21,47 @@ function checkInvertary(callback) {
 function createOrder(callback) {
   setTimeout(() => {
     console.log("creating an order");
-    // const error = new Error("order creation failed");
+
+    const error = null;
     callback(error);
   }, 1000);
 }
 
-function chargePyment(callback) {
+function chargePayment(callback) {
   setTimeout(() => {
-    console.log("changing payment");
-    let chargedAmount = 100;
-    // const error = new Error("payment failed");
+    console.log("charging payment");
+
+    const error = null;
+    const chargedAmount = 100;
+
     callback(error, chargedAmount);
   }, 2000);
 }
 
 function sendMail(callback) {
   setTimeout(() => {
-    // const error = new Error("mail sending failed");
-    console.log(error, "sending the invoice ");
+    console.log("sending the invoice");
+
+    const error = null;
     callback(error);
   }, 1000);
 }
 
 function main() {
-  checkInvertary((error) => {
-    if (error) {
-      console.log("Error:", error.message);
-      return;
-    }
-    createOrder((error) => {
-      if (error) {
-        console.log("Error:", error.message);
-        return;
-      }
-      chargePyment((error, chargedAmount) => {
-        if (error) {
-          console.log("Error:", error.message);
-          return;
-        }
-        console.log(chargedAmount);
+  checkInventory((error) => {
+    if (error) return console.log("Error:", error.message);
 
-        sendMail(() => {
-          if (error) {
-            console.log("error : ", error.message);
-          }
+    createOrder((error) => {
+      if (error) return console.log("Error:", error.message);
+
+      chargePayment((error, chargedAmount) => {
+        if (error) return console.log("Error:", error.message);
+
+        console.log("Charged:", chargedAmount);
+
+        sendMail((error) => {
+          if (error) return console.log("Error:", error.message);
+
           console.log("all tasks completed");
         });
       });
@@ -72,3 +70,9 @@ function main() {
 }
 
 main();
+
+
+
+
+
+
