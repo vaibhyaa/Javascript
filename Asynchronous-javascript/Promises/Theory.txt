@@ -1,0 +1,60 @@
+A Promise is an object that represents the eventual result of an asynchronous operation.
+
+
+How to create a promise (different ways):-
+promise constructor:-
+const myPromise = new Promise((resolve, reject) => {
+  const success = true;
+  if (success) {
+    resolve("Operation successful");
+  } else {
+    reject("Operation failed");
+  }
+});
+
+
+Flow:-
+Resolve → pass result to next then
+Reject  → skip thens → go to catch
+
+javascript promises make handling asynchronous operations like API calls , file load , or time delays easier 
+Think of a promises as a placeholder for a value that will be available in the future.
+It can be in one of three states:
+1)Pending :The task is in the initial state.
+2)Fulfilled: The task was completed successfully, and the result is available 
+3)Rejected: The task failed, and an error is provided 
+
+Promise chaining:-
+Running multiple asynchronous operations in sequence, where the output of one step becomes the input of the next step.
+whay chaining happend because then() always return new promise 
+
+Promise.resolve():-
+create resolved promise 
+
+Promise.reject():-
+Promise.resolve()
+
+Promise.all()
+Creates rejected promise.
+Waits for all
+If one fails → entire thing fails
+
+Promise.race()
+First one to settle wins.
+
+Promise.allSettled()
+Waits for all regardless of success/failure.
+
+
+Promise.any()
+Returns first successful promise.
+
+
+
+inerview:-
+Interview-Level Summary
+new Promise() executor runs immediately.
+Promise state changes synchronously.
+.then() and .catch() always run asynchronously (microtask).
+If rejected → skip .then().
+If resolved → skip .catch().
