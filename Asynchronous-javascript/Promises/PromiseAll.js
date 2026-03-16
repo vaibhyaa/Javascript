@@ -9,23 +9,17 @@
 // resolves with an array of results in the same order
 // rejects immediately if any promise is rejected
 
-
-
 // Start all promises at same time
 //         ↓
 // Wait until ALL complete
 //         ↓
 // Return array of results
 
-
-
-
 // example 1:-
 // const p1 = Promise.resolve(1);
 // const p2 = Promise.resolve(2);
 // const p3 = Promise.resolve(3);
 // const p4 = Promise.resolve(4);
-
 // Promise.all([p1, p2, p3, p4])
 //   .then((data) => {
 //     console.log(data);
@@ -35,7 +29,7 @@
 //   });
 
 // example 2:-
-//   even if order is reversed :- even if promises resolved at different time
+// even if order is reversed :- even if promises resolved at different time
 // Order depends on array position, not timing.
 // const p1 = new Promise((res) => setTimeout(() => res("First"), 2000));
 // const p2 = new Promise((res) => setTimeout(() => res("Second"), 1000));
@@ -45,43 +39,118 @@
 
 // example 3:-
 // if one of the promise is rejected
-const p1 = Promise.resolve("A");
-const p2 = Promise.reject("Error in B");
-const p3 = Promise.resolve("C");
-
-Promise.all([p1, p2, p3]).then(console.log).catch(console.log);
+// const p1 = Promise.resolve("A");
+// const p2 = Promise.reject("Error in B");
+// const p3 = Promise.resolve("C");
+// Promise.all([p1, p2, p3]).then(console.log).catch(console.log);
 
 //   It stops immediately.
 // 👉 Other results are ignored.
 
-
-
 // real world example :-
-Promise.all([fetchUser(), fetchPosts(), fetchComments()]).then(
-  ([user, posts, comments]) => {
-    console.log(user, posts, comments);
-  },
-);
-
+// Promise.all([fetchUser(), fetchPosts(), fetchComments()]).then(
+//   ([user, posts, comments]) => {
+//     console.log(user, posts, comments);
+//   },
+// );
 
 // example 4:-
-const promise1 = Promise.resolve(10);
+// const promise1 = Promise.resolve(10);
+// const promise2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(20);
+//   }, 2000);
+// });
+// const promise3 = Promise.resolve(30);
 
-const promise2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve(20);
-  }, 2000);
-});
+// function onSuccess(data) {
+//   console.log(data);
+// }
+// function onError(error) {
+//   console.log(error);
+// }
 
-function onSuccess(data) {
-  console.log(data);
-}
+// Promise.all([promise1, promise2, promise3]).then(onSuccess).catch(onError);
 
-function onError(error) {
-  console.log(error);
-}
+// example : waiting fir all promise to resolved
+// const pr1 = Promise.resolve({ name: "Vaibhav" });
+// const pr2 = Promise.resolve({ age: "27" });
+// const pr3 = new Promise((resolve) => {
+//   setTimeout(() => {
+//     resolve({ lang: "marathi" });
+//   }, 2000);
+// });
 
-const promise3 = Promise.resolve(30);
+// Promise.all([pr1, pr2, pr3])
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+//   example 2:-
+// Handling Promise with timeputs
+// const tout = (t) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(`Completed in ${t}`);
+//     }, t);
+//   });
+// };
+
+// Promise.all([tout(2000), tout(1000)])
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// example 3:- array of promises with varying timeouts
+// const pt1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(`Resolved after 1 sec`);
+//   }, 1000);
+// });
+// const pt2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(`Resolved after 3 sec`);
+//   }, 3000);
+// });
+// const pt3 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(`Resolved after 1.5 sec`);
+//   }, 1500);
+// });
+// Promise.all([pt1, pt2, pt3])
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// example 4 :- handling error in promise
+const pt = (time) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (time === 2000) {
+        reject(`rejected in ${time}`);
+      } else {
+        resolve(`completed in ${time}`);
+      }
+    }, time);
+  });
+};
+
+Promise.all([pt(1000), pt(2000), pt(3000)])
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 // Promise.all([promise1, promise2, promise3]).then(onSuccess).catch(onError);
 // iterable :- An array or other iterable object containing promises or other values .Non-promise values are treated as resolved promises.
@@ -90,10 +159,8 @@ const promise3 = Promise.resolve(30);
 // if the passed iterable cotnains no promise, it retunrns a promise that is reolved asynchronously with an array of the values from the iterable.
 // for all other cases , it return a pending promise
 
-
 // interview :-
 // Promise.all() takes an array of promises and returns a new promise that resolves when all promises resolve, or rejects immediately if any promise rejects. It preserves order and runs promises in parallel.
-
 
 // | Method             | If one fails        |
 // | ------------------ | ------------------- |

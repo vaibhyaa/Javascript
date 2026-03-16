@@ -39,12 +39,11 @@ Creates rejected promise.
 Waits for all
 If one fails → entire thing fails
 
-Promise.race()
-First one to settle wins.
-
 Promise.allSettled()
 Waits for all regardless of success/failure.
 
+Promise.race()
+First one to settle wins.
 
 Promise.any()
 Returns first successful promise.

@@ -35,7 +35,8 @@
 // console.log(num);
 
 //create a empty array to store the values (todo items)
-const todoList = [1, 2];
+// const todoList = [1, 2];
+const todoList = [];
 
 function renderTodoList() {
   let todoListHTML = "";
@@ -43,7 +44,13 @@ function renderTodoList() {
   for (let i = 0; i < todoList.length; i++) {
     const todo = todoList[i];
     // console.log(todo);
-    const html = `<p>${todo}</p>`;
+    const html = `<p>${todo} 
+    <button onclick="
+    todoList.splice(${i},1)
+    renderTodoList();
+    ">Delete
+    </button> 
+    </p>`;
     todoListHTML += html;
     console.log(todoListHTML);
   }
