@@ -1,0 +1,95 @@
+in javascript, error and exception handling allows you to manage unexpected issues that occur during the exception of you code .
+By using try..catch , throw , finally you can handle error easily and prevent the programm from crashing 
+This enables you to provide meaningful error message, debug your code efficiently , maintain smooth exception 
+
+What is javascript error ?
+the error is problem that prevents the code from running as expected 
+the errors can occur during development or while the application is running, causing the programm to stop executing properly.
+Different type of error in javascript:-
+
+the type of error in javascript:- 
+syntax error :- 
+this happens when the code doesnot fllow the correct syntax 
+reference error :- 
+occurs when we try to access variable that hasn't been declared.
+Type error:-
+This happens when a value is not of the expected type 
+Range error:- 
+occurs when a value is out of range, like passsing as invalid num to a function 
+
+custom error :- 
+a custom error is an error that you create yourself to give more specific messages that make sense for your application
+it helps you explain exactly what went wrong in a a way that easy to understand and fix 
+
+
+
+
+Handling Errors using try...catch :-
+the try..catch statement 
+try block :- you place code that may potentially throw an error here 
+catch block :- this block executes if an error occurs in the try block 
+finally block :- ths code inside this block will always run, wheather an error occurred or not 
+
+try {
+	//code that may throw error 
+} catch (error ){
+	//code to handle the error 
+}finally {
+	optionsl : code that runs regardless of success or error 
+}
+
+
+throwing custom error :- 
+sometimes , the standard javascript error are not sufficient for our application needs.
+in such cases, you can throw custom using the throw statement 
+
+function check(age){
+	if(age<18){
+        throw new Error("age must be 18 or above")
+	}
+	console.log("login successfully ..")
+}
+
+try{
+	check(15);
+}catch(error){
+	console.log(error.message);
+}
+
+
+using finally for cleanups:- 
+the final block is executed regardless if wheather an error occured or not 
+
+try {
+	console.log("...trying ");
+	throw new Error('an error accured')
+} catch (error){
+	console.log(error.message)
+} finally {
+	console.log("cleaning up..")
+}
+
+
+
+
+
+
+advaned try...catch with async/await
+async function fetchData(url){
+	try {
+	   let res=await fetch(url);
+	   let data = await res.json();
+	   console.log(data);
+	} catch (error){
+	   console.error("Error fetch ing data :" ,error.message) 
+	} 
+}
+fetchData("shdbkcjlnka")
+
+
+
+
+benefits of exception handling :- 
+graceful degradation :- if error occurs , then also the programm keeps running smoothly.
+error logging:- it helps by recording error details, making it easier to find and fix problems 
+Prevent crashes :- it ensures the app doesnot completely stop working when something goes wrong. 
