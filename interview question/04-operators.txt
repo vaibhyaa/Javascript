@@ -1,0 +1,4 @@
+)what is the difference between == and === javascript ?
+In javascript, == the loose equality operator, which compares two values for equality after performing type coersion if necessart.
+this means it converts the operands to the same type before comparing 
+=== is the strict operator , which compares both values and their types 

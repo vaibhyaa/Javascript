@@ -49,7 +49,6 @@ Promise.any()
 Returns first successful promise.
 
 
-
 inerview:-
 Interview-Level Summary
 new Promise() executor runs immediately.
@@ -57,3 +56,8 @@ Promise state changes synchronously.
 .then() and .catch() always run asynchronously (microtask).
 If rejected → skip .then().
 If resolved → skip .catch().
+
+
+
+
+

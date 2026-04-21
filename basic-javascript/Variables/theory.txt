@@ -10,9 +10,34 @@
 
 // what is variable:-
 // it is like a container that holds data can be reused or updated later in the programm 
-// variables are declarted using the keywords ver , let const 
+// variables are declarted using the keywords ver , let , const 
 
 // declaing varibles in javascript :-
-before ES6(2015):- Varibles were declared  only with var which is function -scoped and global - scoped , causing issues like hoisting and blobal pollution,
+before ES6(2015):- Varibles were declared only with var which is function-scoped and global-scoped , causing issues like hoisting and blobal pollution,
 Es6 introduction : let and const intruduced to provide safer alternatives for declaing varibles 
 scope :- let ad const are blocked-scoped (limited to {} block ) or global-scoped , reducing error compared to var  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Feature                     | `var`           | `let`          | `const`        |
+| --------------------------- | --------------- | -------------- | -------------- |
+| Scope                       | Function scoped | Block scoped   | Block scoped   |
+| Re-declare                  | ✅ Yes           | ❌ No           | ❌ No           |
+| Re-assign                   | ✅ Yes           | ✅ Yes          | ❌ No           |
+| Hoisted                     | ✅ Yes           | ✅ Yes          | ✅ Yes          |
+| Initialized during hoisting | ✅ `undefined`   | ❌ No           | ❌ No           |
+| TDZ                         | ❌ No            | ✅ Yes          | ✅ Yes          |
+| Access before declaration   | `undefined`     | ReferenceError | ReferenceError |
+| Must initialize immediately | ❌ No            | ❌ No           | ✅ Yes          |

@@ -1,10 +1,10 @@
 // let keyword
-// a let keyword is a modern way to declare variables in javascript and was introduced in ECMAScript 6 Unlike car, let provides block-level scoping.
+// a let keyword is a modern way to declare variables in javascript and was introduced in ECMAScript 6 Unlike var, let provides block-level scoping.
 // this behavior helps developers avoid unintended issues caused by variable hoisting and scope leakage that are common with var 
 
 // Key feaures:-
 // Block scope :-
-// variables declared with let kwyeord are block -scoped meaning they are only accessible within the block , statement , or expression where they are defined .
+// variables declared with let keyword are block -scoped meaning they are only accessible within the block , statement , or expression where they are defined .
 // this is significant improvement over var , which has function scope and can lean to unexpected behavior 
 
 if (true) {
@@ -16,7 +16,7 @@ if (true) {
 
 
 // no hoisting issues :-
-// while variables declared with let are hsoisted , they are not initialized . This creates temporal dead zone (TDZ) where accessing the varaible before its declaration results in a referenceError , helping prevent unintended access 
+// while variables declared with let are hoisted , they are not initialized . This creates temporal dead zone (TDZ) where accessing the varaible before its declaration results in a referenceError , helping prevent unintended access 
 // variables declared with let are hoisted but remain unitialized , avoiding accidental access before declaration 
 //  this ensures no unexpected behavior , unlike var , where the variable can be accessed before its actual declaration 
 
@@ -27,7 +27,7 @@ if (true) {
 
 
 // suitable for loops :-
-// using let in loops is particularly beneficial because the varible declared with let is scoped to the loop block , and each iteration gets a new instance of the varible 
+// using let in loops is particularly beneficial because the varible declared with let is scoped to the loop block , and each iteration gets a new instance of the variable
 // for (let i = 0; i < 3; i++) {
 // 	console.log(i);
 // } 

@@ -1,0 +1,19 @@
+)what is use of setTimeout?
+the setTimeout() method is used to call a function after a specified number of milliseconds.
+
+
+)what is purpose of clearTimeout method ?
+it is used in javascript to clear the timeout which has been set by setTimeout() before.
+the return value of the setTimeout() function is stored in variable and it is passed into the clearTimeout() function to clear the timeout.
+
+
+
+
+)whats is use of setInterval()
+this method is used to call a function st a specified intervals (mentionsd in milliseconds)
+
+)what is purpose of clearInterval method ?
+it is used in javascript to clear the interval which has been set by setInterval() function 
+the return value of the setInterval() function is stored in variable and it is passe into clearInterval() function to clear the interval.
+
+

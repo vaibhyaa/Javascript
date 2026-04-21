@@ -1,0 +1,53 @@
+)What is promise?
+A Promise is an object that represents the result of an asynchronous operation.
+A promise is a javascript object that represents eventual completion of an asynchronous operation and its resulting value.
+A promise can be in one of three states: 
+pending : Initial state, neither fulfilled or rejected.
+fulfilled :- the operation completed successfully.
+rejected : the operation failed.  
+
+
+)why we need promise ?
+it is used to handle asynchronous operations, which often work with non-blocking operations such as network request, file I/O and timers.
+it is used to : handle asynchronous operation , provide a cleaner alternative to callbacks , avoid callback hell , make code more readable and maintainable 
+
+
+)what is callback?
+A callback is a function passed as an argument to another function, which is executed later.
+a callback function is a function that is passed into another function as an argument.
+this function is invoked inside outer function to complete an action.
+
+)why we need callbacks ?
+Handle Asynchronous Operations, Control Execution Order, Make Functions Reusable, Event Handling, 
+
+)what is callback hell?
+callback hell ia an anti-pattern with multiple nested callbacks which makes code hard to read and debug when dealing with asynchronous login.
+
+)what are main rules of promise ?
+A Promise Has 3 States: once it is settled we cannot change it 
+A Promise Settles Only Once 🔒
+.then() Handles Success
+.catch() Handles Errors
+finally() Always Runs (regardless of success or failure)
+Promises Are Chainable ,Each .then() returns a new promise👉 Returned value goes to next .then()
+
+)What is promise chaining ?
+Promise chaining allows you to execute asynchronous tasks step by step in sequence.
+
+
+)what is promise.all ?
+it is a promise that takes an array of promises and it gets resolved when all the promises get resolved , or any one of them get rejected.
+
+)what is race in promise ?
+it is method whch takes an array of promise and it will return the promise instance which resolved or rejected first.
+
+
+)what are the pros and cons of promise over callbacks ?
+pros:-
+it avaoid callback hell which is unreadable 
+easy to write sequestial asynchronous code with .then()
+easy to paralle asynch code with promise.all()
+cons:-
+it makes little complex code 
+you need to load a polyfill if ES6 is NOT SUPPORTED 
+

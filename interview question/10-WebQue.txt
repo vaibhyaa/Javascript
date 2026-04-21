@@ -1,0 +1,72 @@
+)what is web storage ?
+Is a browser feature that lets you store data (key–value pairs) on the client side so it persists across page reloads.
+web storage is an API that provides a mechanism by which browsers can store key/value pairs locally within the users broswer.
+web storage provides two mechanism for storing data on the client :- 
+Local storage:-(stores data permanently) Shared across all tabs of the same origin.
+session storage:- it stores data for one session and the data is lost when browser tab is closed.
+| Feature       | localStorage | sessionStorage |
+| ------------- | ------------ | -------------- |
+| Expiry        | No expiry    | On tab close   |
+| Scope         | All tabs     | Single tab     |
+| Storage limit | ~5MB         | ~5MB           |
+
+
+
+
+)what is cookie ?
+A cookie is a small piece of data stored in the user’s browser that is sent automatically with every HTTP request to the server.
+cookie are saved as key/value pairs 
+request ---> response + cookie ---> request + cookie 
+
+
+)why do we need cookie ?
+authentication , personalization , session management 
+types of cookie :- session / persistent / secure / httpOnly /sameSite 
+it is used to remember information about the user profile (such as username):-
+when a user visits a web page, the user profile can be stored in a cookie.
+Next time the user visits the page, the cookie remembers the user profile.
+
+
+)How do you delete a cookie ?
+you can delete cookie by setting the expiry date as a passed date.
+
+
+)What is Web Storage?
+Web Storage is a browser feature that allows websites to store data on the client (user’s browser) in a key–value format.
+)difference between cookie / local storage / session storage ?
+| Feature          | Cookies 🍪                | localStorage 💾 | sessionStorage 🕒 |
+| ---------------- | ------------------------- | --------------- | ----------------- |
+| Storage location | Browser                   | Browser         | Browser           |
+| Sent to server   | ✅ Yes (every request)     | ❌ No            | ❌ No              |
+| Expiry           | Set manually (can expire) | No expiry       | On tab close      |
+| Storage size     | ~4KB                      | ~5MB            | ~5MB              |
+| Accessibility    | JS + Server               | JS only         | JS only           |
+| Scope            | All tabs (same origin)    | All tabs        | Only same tab     |
+| Security         | More secure (HttpOnly)    | Less secure     | Less secure       |
+
+
+
+)local storage methods ?
+localStorage.setItem("key", "value");     // store data
+localStorage.getItem("key");              // get data
+localStorage.removeItem("key");           // remove specific key
+localStorage.clear();                     // remove all data
+localStorage.key(index);                  // get key name by index
+localStorage.length;                      // total items
+
+)session storage methods?
+sessionStorage.setItem("key", "value");
+sessionStorage.getItem("key");
+sessionStorage.removeItem("key");
+sessionStorage.clear();
+sessionStorage.key(index);
+sessionStorage.length;
+
+
+
+)What is a Storage Event?
+A Storage Event is a browser event that fires when localStorage or sessionStorage is changed in one tab, and other tabs of the same origin get notified.
+
+
+)what is event handlers ?
+Storage event handlers are functions attached to the window object using addEventListener('storage', handler) or window.onstorage, which execute when Web Storage changes in another tab

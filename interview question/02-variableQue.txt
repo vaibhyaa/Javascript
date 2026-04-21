@@ -1,0 +1,40 @@
+)what is the difference between var , let and const and what is the temporal dead zone ?
+var :- declares variable with function or global scope and allows re-declaration and updates within the same scope 
+let:- declares variables with block scope , allowing updates but not re-declaration within the same block 
+const :- declares block-scoped variables that cannot be reassigned after their initial assignment.
+
+
+)var vs let:- 
+var:- available from beginning of javscript --> function scope --> variable declaration will be hoisted , initialized as undefined -->possible to re-declare the variable in th same scope 
+let :- introduced as prt of ES6  -->it has block scope --> hoisted but not initialized --> not possible to re-declare the variable
+
+
+
+)what is hoisting ?
+
+
+hoisting is javscript's default behavior where variable and function declarations are moved to the top of their scope before code execution.
+you can access variable and function even before they are initialized.
+
+)what is temporal dead zone ?
+refers to the period between the start of the block and point where a variable declared with let and const .
+var variable are hoisted and initialized with undefined.
+
+
+
+)what is global variables ?
+global variables are those that are available throughtout the length of code without any scope.
+the var keyword is used to declare the global variable 
+
+
+)what are problems with global variables ?
+the problem with global variables is the conflict of variables of local and global scope 
+it is also difficult to debug and test the cde that relies on global variables 
+
+)what is the purpose of isFinite function ?
+this isFinite function is used to determine wheather a number is a finite and legal number 
+
+
+
+
+

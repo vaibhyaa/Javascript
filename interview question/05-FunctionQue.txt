@@ -1,0 +1,87 @@
+)what is closure ?
+a closure in javascript is when inner function remembers and that has access to the outer function variable, functions and other data even after the outer functon has finished its execution.
+3 scope chains :- 
+own scope where variables defined between its curly brackets , outer function variables , global variables 
+function createBankAccount(balance) {
+  return {
+    deposit(amount) {
+      balance += amount;
+      return balance;
+    },
+    withdraw(amount) {
+      balance -= amount;
+      return balance;
+    }
+  };
+}
+const account = createBankAccount(1000);
+console.log(account.deposit(500));  // 1500
+console.log(account.withdraw(200)); // 1300
+
+
+
+
+)what is first class functions ?
+means that functions are treated like any other variable.
+you can assign function to variable
+you can pass function as an arguments to another function 
+you can return a function from another function 
+
+
+)what is first order function ?
+it is function that doesnot accept another function as an argument and doesnot return function as its return value.
+its regular function that works with primitive or non-function values 
+
+
+)what is a higher order function ?
+it is a function that either accepts another function as an arguments, returns a function as its result or both 
+it is widely used for creating modular , reusable , expressive code 
+
+)what is unary function ?
+unary function is function that accepts exactly one arguments 
+
+)what is currying function ? 
+it is a process of tranforming a function with multiple arguments into sequence of nested functions, each accepting only one argument at a time .
+benefits of currying :- improves code reusability , ehances functional composition , encures clean , modular code 
+
+
+)what is pure function ?
+it is a function whose output depends only on its input argument and produce no side effects.
+means that for given same inputs , a pure function will always return the same output and it does not modify any external state or data 
+benefits of pure function :- easier testing , predictability , immutability , no side effects 
+
+
+)what is scope in javascript ?
+scope is the accessibility of variables , functions , objects in some particular part of your code during code runtime.
+
+)what is IIFE(immediately invoked function expression )
+this is the function that runs as soos as it is defined
+the primary reason to use IIFE is to obtain data privacy because any variable declared within the IIFE cannot be accessed by outside world then it throws as error 
+
+
+
+IMP:-3)What is the difference between call , apply , bind ?
+this are the methods which allows you to controls the context(this value) in which a function is executed.
+purpose is simliar :- they differ in how they handle arguments and when the function is invoked 
+call() :- the call() methods invokes a function immediately , allowing you to specify the value of this and pass arguments individullay (comma-seperator ) 
+apply:- the apply() method is similar to call() , but it takes the function arguments as an array (or array-like-object) instead of individual argumenst 
+bind():-
+the bind() method creates a new function with specific this value and , optionally , preset initial arguments 
+unlike call and apply , bind does not immediately invoke the function : instead , it returns a new function that you can call later 
+call and apply are almost interchangeble ; both invoke the function immediately , but differ in how arguments are passed 
+binds down not execute the function immediately . instead it creates a new function with the spefified this value and optional arguments , which can be called later 
+use call or apply when you want to immediately invoke a function with specific this context . use bind when you want to create a new function with specific this context to be invoked later 
+
+call-->invokes function immediately --> arguments are passed in comma-seperated list --> function results 
+apply--> invokes function immediately -->  arguments are passed in arrayor array-like object  -->function results
+bind --> doesnt invokes function immediately --> (optional)present, then rest --> new function is returned 
+
+
+
+
+)what is arrow functions or lambda expressions? 
+this function provide a concise syntax for writing function expression in javascript.
+this functions are often shorter, more readable, especially for simple operations or callbacks
+this function do not have their own this, arguments, super bindings ,they inherit these from their surroundings. 
+they inherite from their surrounding (lexical) context.
+cannot be used as constructor / do not have the prototype property 

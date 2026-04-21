@@ -18,7 +18,7 @@ console.log(hello());
 // arrow function are always expression and must be assigned to a variable
 // they cannot be used before they are defined
 
-// arroe function and the this keyword :-
+// arrow function and the this keyword :-
 // arrow function do not have their own this value
 // they inherit this from the surrounding code.
 

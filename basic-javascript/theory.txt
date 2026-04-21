@@ -18,7 +18,8 @@ javascript is single-threaded language that executes the code line by line
 the data type of variable is decided at run-tim in javascript, which is why it is called dynamically typed 
 
 keyfeatures of javascript:-
-cliend side scripting :- it runs on users browser so has faster response timw without needing to communicate with server 
+cliend side scripting :- it runs on users browser so has faster response time 
+ without needing to communicate with server 
 versatile: -can be used for a wide range of tasks . from simple cal to complex server-side application 
 event-driven : responds to user actions (clicks , keystrokes ) in real-time 
 asynchrorous :-it can handle tasks like fetching data from servers without freezing the user interface 

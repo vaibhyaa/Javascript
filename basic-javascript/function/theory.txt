@@ -11,7 +11,7 @@ local varibles can only be accessed from within the funciton
 parameters :- are the listed in the funciton definitaion 
 arguments :- are the real values passed to , and received by the function
 
-in fucntion , parameters are placeholder defined in the function , while arguments are the actual values you pass when calling the funciton 
+in function , parameters are placeholder defined in the function , while arguments are the actual values you pass when calling the funciton 
 
 function greet(name){
 	console.log('Hello', name)
@@ -86,8 +86,9 @@ IIEF function are executed immediately after their definitation . they are often
 })();
 
 
+imporant :- 
 6)callback function :-
-a callback function is passed as an argument to another function and is executed after the completion of that function 
+A callback function is a function that is passed as an argument to another function and is executed later.
 funciton num(n,callback){
 return callback(n);
 }
@@ -138,9 +139,12 @@ function factorial (n){
 }
 
 
-
+imporant :- 
 11) higher order function :- 
-a function that either takes another function as a parameter or returns another function.
+A Higher Order Function is a function that:
+takes another function as an argument, OR
+returns another function
+If a function does either one, it is called a Higher Order Function.
 these are common in javascript (map,filter , reduce )
 function multiplyBy(factor){
 	return function(num){

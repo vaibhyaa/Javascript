@@ -1,0 +1,74 @@
+Proper JavaScript Flow (for Notes + Understanding)
+🔹 1. Basics (you already did)
+Variables (var, let, const)
+Data types
+Operators
+Conditions
+Loops
+
+👉 Just keep short notes, don’t over-write
+
+🔹 2. Functions (continue here properly)
+
+Write in order:
+
+Function Declaration
+Function Expression
+Arrow Function
+Parameters vs Arguments
+Default / Rest parameters
+Callback functions
+Higher-order functions
+Closures 🔥
+Lexical Scope
+this keyword 🔥 (VERY IMPORTANT)
+🔹 3. Execution & Memory (Core JS 🔥)
+
+This is where most people fail — don’t skip
+
+Execution Context
+Call Stack
+Hoisting (deep)
+Temporal Dead Zone (TDZ)
+Stack vs Heap memory
+🔹 4. Objects (Very Important)
+Object basics
+Methods
+this in objects
+Destructuring
+Spread / Rest
+Object methods (keys, values, etc.)
+🔹 5. Arrays (Important + Interview)
+Array methods:
+map
+filter
+reduce 🔥
+forEach
+find
+
+👉 Write use-case + small example only
+
+🔹 6. Asynchronous JavaScript 🔥
+Synchronous vs Asynchronous
+Callbacks
+Callback hell
+Promises
+Promise chaining
+async/await
+Event Loop (VERY IMPORTANT)
+🔹 7. Browser & DOM
+window vs document
+DOM selection
+Events
+Event bubbling / capturing
+Event delegation
+stopPropagation
+🔹 8. Web APIs
+localStorage
+sessionStorage
+cookies
+🔹 9. Advanced (Final Layer 🔥)
+Prototypes & prototype chain
+call, apply, bind
+Classes (basic)
+Modules (import/export)

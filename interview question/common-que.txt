@@ -1,0 +1,21 @@
+)how do you valiate an email javascript ?
+you can validate an email in javascript using regular expression. It is recommanded to do validation on server side intead of client side.
+because javascript can be disabled on the client side 
+
+)how do you get the current URL with javascript ?
+you can use window.location.href 
+
+
+)what are the various url properties of location object ?
+href- the entire url 
+protocal- the protocal of url 
+host- the hostname and port of the url 
+hostname- the hostname of url 
+post - port number in the url 
+pathname- the path name of the url 
+search - the query portion of the url 
+hash- the anchor portion of url 
+
+
+)how to you get query string values in javscript?
+you can use urlSearchParams to get query string values in javscript

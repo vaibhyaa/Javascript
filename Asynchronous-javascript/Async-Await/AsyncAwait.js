@@ -2,7 +2,7 @@
 
 // async function always return promise
 // await pauses execution until the promise is resolved or rejected
-// improve readability compared to .then() and .catc() chaining
+// improve readability compared to .then() and .catch() chaining
 // makes error handling simple using try ..catch
 // ideal for managing complex asynchronous flows in s structured way
 

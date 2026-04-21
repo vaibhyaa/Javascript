@@ -1,0 +1,32 @@
+)what are the possible ways to create object in javascript ?
+:- there are many ways to create objects in javascript :-
+object literal ,object constructor ,object create method ,function constructor with prototype , object assign method, ES6 class syntax , singleton pattern
+
+
+
+)what is difference bet native , host and user object ?
+| Feature      | Native Objects      | Host Objects           | User Objects     |
+| ------------ | ------------------- | ---------------------- | ---------------- |
+| Source       | JavaScript lang     | Browser / Node.js      | Developer        |
+| Availability | Always available    | Depends on environment | Created manually |
+| Examples     | Array, Object, Math | window, document       | custom objects   |
+
+
+
+
+)how do you check if a key exists in object ?
+using in operator : for in 
+using hasOwnPropery : obj.hasOwnPropery("user")
+
+
+)how do you loop throught or enumerte javascript object ?
+you can use for-in loop to loop throught javscript object.
+
+
+)how do you test for an empty object ?
+using Object entries , using object keys 
+using for in loop with hasOwnPropery method 
+
+
+)what is arguments object ?
+arguments object is an array like object accessible inside function that contains the values of the arguments passed that function 

@@ -27,7 +27,10 @@ closure();
 // even the though outerFun() has completed execution, innerFun() still has access to outerFun due to the closure
 
 // lexical scope :-
-// Closures are rely on lexical scope , which means function scope is determined by where it is defined, not where it is executed , allowing inner function to access variables from their outer function
+// Closures rely on lexical scope. Lexical scope means a function’s scope is determined by where it is defined in the code, not where it is called. Because of this, an inner function can access variables from its outer function even after the outer function has finished executing.
+
+
+
 // scope is fixed at function definition time.
 // inner functions can access outer function variables
 // enables closures to "remember" their environment

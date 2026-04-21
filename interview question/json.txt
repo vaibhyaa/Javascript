@@ -1,0 +1,24 @@
+)what is json?
+JSON(javascript object notation) is a lightweight ,text-based data format that uses javascript object syntax for structuring data . 
+It is widely used for transmitting data between a server and client in web application.
+
+)what are the syntax rules of json ?
+the data is in name/value pairs 
+the data is seperated by commas 
+curly braces hold objects 
+square brackets hold arrays 
+
+)json.stringify()
+when sending data to web server, the data has to be in a string object 
+json.stringify() is used for converting JSON object into a string 
+
+)json.parse()
+when receiving data from a web server , data is always in a string 
+json.parse() method is used to convert string value to javascript object 
+
+)what is json and its common operations :-
+JSON.parse(): transforming a JSON-formatted string into a javascript object
+JSON.stringify():- transforming a javascript object into JSON-formatted-string, commonly used for data transmission and storage
+
+
+

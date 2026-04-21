@@ -1,8 +1,14 @@
 // promise Race :-
 // promise.race() method return a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with value or reason from that promise
 
-// example
 
+// Runs multiple promises in parallel and:
+// returns the result of the first promise that settles
+// first settled can be:
+// fulfilled ✅
+// rejected ❌
+
+// example
 const p1 = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

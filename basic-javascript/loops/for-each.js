@@ -1,6 +1,6 @@
 // the javascript array foreach() mathod is build in function that executes a provided function once for array element
-// it does not return a new arrya and doesnot modify the original array
-// its commonly used for iteration and performing actiosn on each array  ele
+// it does not return a new array and doesnot modify the original array
+// its commonly used for iteration and performing actions on each array element
 
 // const arr=[1,2,3,4,5];
 // arr.forEach((eachItem)=>console.log(eachItem));

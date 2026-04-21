@@ -6,7 +6,7 @@
 
 // feature of var keyword :-
 // 1 funciton scope:-
-// variables declared using var are function-scoped, This means they are accessible anywhere within the funciton they are declared , even brfore their declaration due to hoisting 
+// variables declared using var are function-scoped, This means they are accessible anywhere within the funciton they are declared , even before their declaration due to hoisting 
 
 
 // What is a Block?
@@ -37,7 +37,7 @@
 
 
 // re-declaration of variables :-
-// var allows you to re-declare variable within teh same scope without throwing any error, which can lead to unintended behavior 
+// var allows you to re-declare variable within the same scope without throwing any error, which can lead to unintended behavior 
 
 // hoisting :-
 // variables declared with var are hoisted to the top of their scope, meaning the declaration part is moved to the top, but not te initialization, This can result in undefined behavior if not understood properly 
@@ -47,7 +47,7 @@
 
 
 // no block scope : -
-// unlike let and const ,var does not have block scope. Variables declared with var inside block are accessible oside that block 
+// unlike let and const ,var does not have block scope. Variables declared with var inside block are accessible outside that block 
 
 // global object property:-
 // varibles declared with var in global scope become properties of the window object 

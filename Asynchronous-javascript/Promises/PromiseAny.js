@@ -1,4 +1,9 @@
 // Promise.any():-
+
+// Runs multiple promises in parallel and:
+// ✅ resolves when the first promise fulfills
+// ❌ rejects only if all promises fail
+
 // is a static method that takes an array of promises as a parameter and returns the first fulfilled promise.
 // it returns a rejected value when all of the promise in the array return reject or of the array is empty
 // when all the promise are rejected an aggregateError is returned which contains the reason for rejection

@@ -1,0 +1,83 @@
+)what is difference between window and document?
+| Feature    | `window` 🌐                    | `document` 📄                         |
+| ---------- | ------------------------------ | ------------------------------------- |
+| Represents | Browser window                 | Web page (HTML DOM)                   |
+| Type       | Global object                  | DOM object                            |
+| Access     | Top-level object               | Property of `window`                  |
+| Usage      | Browser APIs, global variables | Access & manipulate HTML              |
+| Example    | `alert()`, `setTimeout()`      | `getElementById()`, `querySelector()` |
+
+
+
+
+
+)what is event ?
+An event is an action that happens in the browser.
+An event is something that happens in the browser, like a click, key press, or page load.
+An event handler is a function that runs when an event occurs.
+button.addEventListener("click", () => {
+  console.log("Button clicked");
+});
+Here:
+click → event
+function → event handler
+
+
+
+)what is event flow ?
+event flow refers to the order in which events are handled in browser.
+when user interacts with ele on webpage by clicking , typing , hovering , etc
+when you click an ele that is nested in various other ele. before your click actually reaches to its destination, or target ele it must trigger the click event for each of its parent ele firt, starting at the top with the global window object 
+
+)what are the three phases in javascript event flow ?
+1)event capturing:-
+the event start from window/document and moves down the DOMtree towared the target ele.
+2)target pahse :- 
+this event reaches the target ele. 
+3)event bubbling :-
+the event then bubbles up from the target ele to the root 
+
+
+
+)event propogation ?
+Event propagation is the process of how an event travels through the DOM tree when it occurs.
+
+
+)stopPropagation ?
+this methods is used to stop the event from bubbling up the event chain and capturing down further 
+
+
+)event Delegation ?
+means handling events at the parent level uding event bubbling 
+
+
+
+)what is event capturing ?
+Event capturing means the event starts from the top (parent) and goes down to the target element.
+event capturing is a phase of event propogation in which an event if first intercepted by the outermost
+ ele. then ot travels downword through the dom hierarchy until it reaches the target ele 
+
+
+)javascript default behavior ?
+By default, JavaScript uses event bubbling, not capturing
+Capturing only works when you pass: true
+
+)what is event bubbling ?
+Event bubbling means the event starts from the target element and goes up to its parent elements.
+Child → Parent → Document → Window
+
+
+)what is attribute and a property ?
+attribute and defined on the HTML markup.
+properties are defined on the dom.
+
+
+)what is the use of preventDefault ?
+this method cancels the event it it is cancable, making the default action or behavior that belongs to the event will not occur 
+
+
+
+
+)how to do redirect new page in javascript ?
+you can redirect to new page using the location property of window object.
+

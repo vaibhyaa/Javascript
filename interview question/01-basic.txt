@@ -1,0 +1,91 @@
+
+
+)Is javascript compiled or interpreted ?
+javascript is interpreted language and not a compiled.
+a interpreter in the browser reads over the javascript code, interprets each line, and euns it 
+but modern browsers use the technology just-in-time used to compile it to make it faster 
+the browser reads your javascript code line by line and runs it directly 
+modern broswers (like chrome v8 engine) first translate parts of your code into machine code while running it , so the computer can execute it much faster 
+
+
+)How many ways an HTML ele can be accessed in javascript code ?
+4 ways :- 
+getElementById() method :-it is used to get the ele by its id name.
+getElementByClass() method :- it is used to get all the ele that have the given classname.
+getElementByTagName():- it is used to get all the ele that have the given tag name.
+querySelector():- this function takes css style selector and returns the first selected ele.
+
+)What the return-value difference between x++ and ++x?
+both increment, but return different value :-
+post increment (x++):- return old value , then increment.
+pre increment (++x):- increment first , then return the new value
+
+
+)what is prototype chain :-
+It is a core concept of javascript inheritance model. 
+It allows object to inherit properties and methods from other object 
+the prototype chain enables inheritance in javascript. 
+If a property isnt found on an object , javascript looks up its prototype chain. 
+The prototype of an object instance can be accessed with Object.getPrototypeOf(obj) or _proto_.
+
+
+
+)what is memoization ?
+memoization is a functional programming technique which attempts to increase a function's performance by caching its previously computed data.
+memo, useCallback
+
+
+)what are classes in ES6?
+javascript classes are primarily syntatic sugar over javascript existing prototype-based inheritance.
+
+
+)what are modules ?
+it is small unit of independent , reusable code and also act as the foundation of many javascript design pattern 
+most of the javscript modules export as an object literal , function or constructor  
+for maintainability , reusability , namespacing 
+
+
+)what is indexedDB ?
+it is a low-level API for client-side storage of larger amounts of structured data, including files/blobs 
+this API uses indexes to enable high-performance searches of this data 
+
+
+)what is strict mode in javascript ? 
+Strict Mode is a special mode in JavaScript that makes your code run with stricter rules, helping you catch errors early and write safer code
+Prevents accidental mistakes, Improves code security, Makes debugging easier, Avoids bad practices
+
+
+)why do we need strict mode ?
+We use strict mode to avoid common mistakes, catch errors early, and write more secure JavaScript code.
+
+)what is the purpose of the delete operator ?
+the delete operator is used to delete the property and its value.
+
+)what is typeof operator ?
+we use to find the type of an javascript variable. it returns the type of a variableor expression
+
+)what is undefined property ?
+this property indicates a variablehas not assigned a value , or declared but not initialized at all.
+
+)what is null value?
+it represents the initial absence of any object value. it is primitive values . type is object 
+const user=null;
+
+)what is difference between null and undefined?
+| Feature         | `undefined`                  | `null`                    |
+| --------------- | ---------------------------- | ------------------------- |
+| Meaning         | Not assigned / missing value | Intentionally empty value |
+| Set by          | JavaScript (default)         | Developer                 |
+| Type            | `undefined`                  | `object` (JS bug ⚠️)      |
+| Equality (`==`) | `null == undefined` → ✅ true | Same                     |
+| Strict (`===`)  | ❌ false                      | ❌ false                |
+
+
+)what is eval ? 
+eval() is a built-in JavaScript function that executes a string as JavaScript code.
+let result = eval("2 + 3 * 4");
+console.log(result); // 14
+
+
+)what is Nan?
+stands for not a number. NaN is a special value that represents an invalid or undefined number result.

@@ -43,3 +43,20 @@
 
 
 
+
+// | Method                 | Success Condition         | Failure Condition            | Returns                           |
+// | ---------------------- | ------------------------- | ---------------------------- | --------------------------------- |
+// | `Promise.all()`        | All promises must resolve | Fails if **one** rejects     | Array of resolved values          |
+// | `Promise.allSettled()` | Waits for all             | Never fails early            | Array of `{status, value/reason}` |
+// | `Promise.race()`       | First settled promise     | If first settled is reject   | First settled result/error        |
+// | `Promise.any()`        | First fulfilled promise   | Fails only if **all** reject | First successful value            |
+
+
+
+
+
+// promise.all([allpromises])first it wait for all the promises to get resolved  if one of the promise is rejected it stops and return the result 
+// promise.allSettled ([takes an array of promises ]) it waits for all the promises to get settled  
+// irrespective of resolved or rejected  returns state of each promise 
+// promise.race([takes an array of promises]) it retruns the result of promise which gets settled   first irrespective of rsolved or reject
+// Promise.any([takes an array of promises]) . it returs the success if the first promise get resolved  rejects only if all promises fail

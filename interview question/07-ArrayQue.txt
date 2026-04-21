@@ -1,0 +1,24 @@
+)what is the purpose of array slice? 
+it is used to extract a section of an array, returning a new array containing the selected elements.
+does not mutate the original array 
+array.slice(0,2);
+start: The index at which extraction begins(inclusive).
+end (optional): the index before which to end extraction(exclusive).
+
+
+
+)array splice method ?
+is used to add, remove/replace ele within the array 
+it modifies the original array and returns an array containing the removed ele 
+array.splice(start,deleteCount,itam1,item2);
+start: index at which to start chainging the array.
+deleteCount(optional): the num of ele to remove from the array.
+item1,item2: (optioinal)ele to add in the array.
+
+)slice():- does not modify the original array 
+return a shallow copy of selected items 
+used to extract ele from an array 
+
+)splice():- modifies the original array (mutable)
+returns an array of removed elements
+used to add, update/remove ele from array 
