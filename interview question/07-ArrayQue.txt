@@ -1,24 +1,123 @@
-)what is the purpose of array slice? 
-it is used to extract a section of an array, returning a new array containing the selected elements.
-does not mutate the original array 
-array.slice(0,2);
-start: The index at which extraction begins(inclusive).
-end (optional): the index before which to end extraction(exclusive).
+
+// to help you perform common tasks effectively , javascript provides a wide range variety array methods
+
+// | Method         | What It Does                           |
+// | -------------- | -------------------------------------- |
+// | `push()`       | Adds element at end                    |
+// | `pop()`        | Removes last element                   |
+// | `shift()`      | Removes first element                  |
+// | `unshift()`    | Adds element at beginning              |
+// | `splice()`     | Add/remove elements at specific index  |
+// | `sort()`       | Sorts array (modifies original ⚠️)     |
+// | `reverse()`    | Reverses array                         |
+// | `fill()`       | Fills array with static value          |
+// | `copyWithin()` | Copies part of array within same array |
 
 
 
-)array splice method ?
-is used to add, remove/replace ele within the array 
-it modifies the original array and returns an array containing the removed ele 
-array.splice(start,deleteCount,itam1,item2);
-start: index at which to start chainging the array.
-deleteCount(optional): the num of ele to remove from the array.
-item1,item2: (optioinal)ele to add in the array.
+| Method                              | Changes Original? | What It Does                             | Returns                   |
+| ----------------------------------- | ----------------- | ---------------------------------------- | ------------------------- |
+| `push()`                            | ✅ Yes             | Adds element(s) to the **end**           | New length                |
+| `pop()`                             | ✅ Yes             | Removes last element                     | Removed element           |
+| `shift()`                           | ✅ Yes             | Removes first element                    | Removed element           |
+| `unshift()`                         | ✅ Yes             | Adds element(s) to the **start**         | New length                |
+| `splice(start, deleteCount, items)` | ✅ Yes             | Adds/removes elements at specific index  | Array of removed elements |
+| `sort()`                            | ✅ Yes             | Sorts array (default: string order)      | Same array (sorted)       |
+| `reverse()`                         | ✅ Yes             | Reverses array order                     | Same array                |
+| `fill(value, start, end)`           | ✅ Yes             | Fills part/all of array with a value     | Same array                |
+| `copyWithin(target, start, end)`    | ✅ Yes             | Copies part of array to another position | Same array                |
 
-)slice():- does not modify the original array 
-return a shallow copy of selected items 
-used to extract ele from an array 
 
-)splice():- modifies the original array (mutable)
-returns an array of removed elements
-used to add, update/remove ele from array 
+
+
+| Method              | Changes Original? | What It Does                        | Returns   |
+| ------------------- | ----------------- | ----------------------------------- | --------- |
+| `map(fn)`           | ❌ No              | Transforms each element             | New array |
+| `filter(fn)`        | ❌ No              | Keeps elements that match condition | New array |
+| `slice(start, end)` | ❌ No              | Extracts portion of array           | New array |
+| `concat()`          | ❌ No              | Merges arrays                       | New array |
+| `flat(depth)`       | ❌ No              | Flattens nested arrays              | New array |
+| `flatMap(fn)`       | ❌ No              | Map + flatten (1 level)             | New array |
+| `toSorted()`        | ❌ No              | Returns sorted copy                 | New array |
+| `toReversed()`      | ❌ No              | Returns reversed copy               | New array |
+| `toSpliced()`       | ❌ No              | Non-mutating version of splice      | New array |
+
+// | Method        | What It Does                    |
+// | ------------- | ------------------------------- |
+// | `map()`       | Transforms each element         |
+// | `filter()`    | Filters elements                |
+// | `reduce()`    | Reduces to single value         |
+// | `slice()`     | Returns portion of array        |
+// | `concat()`    | Merges arrays                   |
+// | `includes()`  | Checks existence                |
+// | `indexOf()`   | Finds index                     |
+// | `find()`      | Returns first matched element   |
+// | `findIndex()` | Returns index of first match    |
+// | `every()`     | Checks if all satisfy condition |
+// | `some()`      | Checks if any satisfy condition |
+// | `join()`      | Converts to string              |
+// | `flat()`      | Flattens nested array           |
+// | `flatMap()`   | map + flat                      |
+
+
+
+// javascript array length:-
+// let a = ["html", "css", "javascript", "react"];
+// console.log(a.length);
+// the a.length returns the number of ele in the array
+
+// javascript Array toString() method:-
+// convert the given value into string with each ele seperated by commas,
+// let a = ["html", "css", "javascript", "react"];
+// console.log(a.toString());
+// let stringOfArray = a.toString();
+// console.log(stringOfArray);
+// the toString() method converts the array 'a' into a string
+
+// javascript array join() method:-
+// thsi join() method creates and returns a new string by concatenating all ele of an array
+// it uses a specified seperator between each ele in the resulting string
+// let a = ["html", "css", "javascript", "react"];
+// console.log(a.join("|"));
+// console.log(a.join("]"));
+// console.log(a.join("+"));
+
+// javascript array delete operator:-
+// the delete operator is used to delete the given value which can be an object, array , or anything
+// let emp = {
+//   firstName: "Vaibhav",
+//   lastName: "shinde",
+//   salaray: 30000,
+// };
+// console.log(delete emp.salaray);
+// console.log(emp);
+// let a = ["html", "css", "javascript", "react"];
+// console.log(delete a[0]);
+// console.log(a);
+
+// javascript array concate method:-
+// it is used to concatenate two or more arrays and it gives the merged array.
+// let a1 = [11, 12, 13];
+// let a2 = [14, 15, 16];
+// let a3 = [17, 18, 19];
+// console.log(a1.concat(a2, a3));
+// let newArr = a1.concat(a2, a3);
+
+// javascript array flat method:-
+// it is used to flatten the array i.e it merges all the given array and reduces all the nesting present in it
+// const a1 = [
+//   ["1", "2"],
+//   ["3", "4", "5", ["6"], "7"],
+// ];
+// console.log(a1);
+// console.log(a1.flat(Infinity));
+
+
+//javascript array some() method:-
+// the some method checks whether a lease one of the ele of the array satisfies the condition checked by the argument function
+// const a = [1, 2, 3, 4, 5];
+// let result = a.some((eachVal) => eachVal > 4);
+// console.log(result);
+// this method checks if at least one ele in the array satisfies the provied condition.
+// this method stops as soon as it finds the first matching ele , making it efficient for large arrays
+

@@ -2,3 +2,68 @@
 using includes , using indexOf , 
 
 
+what are the string methods that accept regular expression ?
+there are six string methods : 
+search() :- methods uses an expression to search for a match , and return the position of the match 
+replace and replaceAll() :- this methods are used to return a modified string where the pattern is replaces 
+match() and matchAll() :- methods are used to return the matches when matching a string against a regular expression 
+split() :- it is used to split a string into an array of substring and return the new array 
+
+
+
+
+
+| Method          | What It Does               | Returns    |
+| --------------- | -------------------------- | ---------- |
+| `includes()`    | Checks if substring exists | true/false |
+| `indexOf()`     | First occurrence index     | index / -1 |
+| `lastIndexOf()` | Last occurrence index      | index / -1 |
+| `startsWith()`  | Checks start of string     | true/false |
+| `endsWith()`    | Checks end of string       | true/false |
+| `search()`      | Finds match using regex    | index / -1 |
+
+
+
+| Method                  | What It Does                         | Returns    |
+| ----------------------- | ------------------------------------ | ---------- |
+| `slice(start, end)`     | Extracts part of string              | New string |
+| `substring(start, end)` | Similar to slice (no negative index) | New string |
+| `substr(start, length)` | Extracts using length (deprecated)   | New string |
+
+
+
+| Method          | What It Does                  | Returns    |
+| --------------- | ----------------------------- | ---------- |
+| `replace()`     | Replaces first match          | New string |
+| `replaceAll()`  | Replaces all matches          | New string |
+| `toUpperCase()` | Converts to uppercase         | New string |
+| `toLowerCase()` | Converts to lowercase         | New string |
+| `trim()`        | Removes spaces from both ends | New string |
+| `trimStart()`   | Removes leading spaces        | New string |
+| `trimEnd()`     | Removes trailing spaces       | New string |
+
+
+
+
+| Method      | What It Does            | Returns    |
+| ----------- | ----------------------- | ---------- |
+| `concat()`  | Joins strings           | New string |
+| `split()`   | Converts string → array | Array      |
+| `repeat(n)` | Repeats string n times  | New string |
+
+
+| Method              | What It Does            | Returns   |
+| ------------------- | ----------------------- | --------- |
+| `charAt(index)`     | Gets character          | Character |
+| `charCodeAt(index)` | ASCII/Unicode value     | Number    |
+| `at(index)`         | Supports negative index | Character |
+
+
+
+| Method       | What It Does            | Returns      |
+| ------------ | ----------------------- | ------------ |
+| `match()`    | Matches regex           | Array / null |
+| `matchAll()` | All matches (iterator)  | Iterator     |
+| `padStart()` | Pads string at start    | New string   |
+| `padEnd()`   | Pads string at end      | New string   |
+| `valueOf()`  | Returns primitive value | String       |

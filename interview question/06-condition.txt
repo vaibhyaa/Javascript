@@ -1,0 +1,4 @@
+)what is condition operator in javascript ?
+conditional(ternary) operator is the only javascript operator takes 3 operands 
+acts as a shortcut for if statement
+ 

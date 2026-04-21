@@ -1,2 +1,7 @@
 )what are pros and cons of for loop ?
 p
+
+
+)what are break and continue statements ?
+break :- the break statement is used to "jump out" of a loop i.e it breaks the loop and continues executing the code aafter loop 
+continue :- is used to "jump over" one iteration in the opp i.e it breaks one iteration (in the loop ) is a specified condition occurs and continues with the next iteration in the loop 

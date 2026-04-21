@@ -30,3 +30,21 @@ using for in loop with hasOwnPropery method
 
 )what is arguments object ?
 arguments object is an array like object accessible inside function that contains the values of the arguments passed that function 
+
+
+)how do you add key value pair in javscript ?
+using dot notation , using square bracket 
+
+
+)how do you generate random integers ?
+you can use Math.random() with Math.floor() to return random intergers 
+it return a random number between 0(inclusive), and 1(exclusive)
+
+
+
+)what is the freeze method ?
+it is used to freez an object.
+freezing object does not allow adding new properties to an object , prevents removing , and prevents changing and enumerability ,
+configurability or writability fo existing properties 
+it return the passed object and does not create a frozen copy 
+it only applied to top level properties in objects but not for nested objects 

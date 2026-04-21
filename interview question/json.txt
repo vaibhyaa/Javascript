@@ -21,4 +21,10 @@ JSON.parse(): transforming a JSON-formatted string into a javascript object
 JSON.stringify():- transforming a javascript object into JSON-formatted-string, commonly used for data transmission and storage
 
 
-
+)how do you define json array ?
+json array are writeen inside square brackets and arrays contains javascript object.
+"user":[
+	{"":"",...},
+	{"":"",...},
+	{"":"",...}
+]
